@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050509">
+<title>Wallpaper</title>
+<style>
+*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#000;color:#fff;font-family:ui-monospace,Menlo,monospace}canvas{position:fixed;inset:0;width:100%;height:100%;image-rendering:pixelated}.controls{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);display:flex;gap:8px;padding:8px;border:1px solid #ffffff26;border-radius:16px;background:#09090dd9;backdrop-filter:blur(16px);transition:opacity .2s;z-index:2}.controls button{border:1px solid #ffffff35;border-radius:10px;background:#22222b;color:#fff;padding:9px 12px;font:600 13px ui-monospace,Menlo,monospace;cursor:pointer}.controls button[aria-pressed=true]{background:#fff;color:#111}.controls select{max-width:190px;border:1px solid #ffffff35;border-radius:10px;background:#22222b;color:#fff;padding:8px;font:600 13px ui-monospace,Menlo,monospace}body.native-wallpaper{cursor:none}body.native-wallpaper .controls{display:none}.status{position:fixed;top:12px;right:14px;padding:6px 9px;border-radius:8px;background:#09090da8;font-size:12px;z-index:2;opacity:0;transition:opacity .2s}.status.show{opacity:1}@media(max-width:600px){.controls{bottom:8px;max-width:calc(100vw - 16px)}.controls button{padding:8px}.controls select{min-width:0}}
+</style>
+</head>
+<body>
+<canvas id="stage" aria-label="Self-playing pixel-art visualizer"></canvas>
+<div class="controls" aria-label="Wallpaper controls">
+  <select id="scene" aria-label="Scene"></select>
+  <button id="previous" type="button" aria-label="Previous scene">←</button>
+  <button id="next" type="button" aria-label="Next scene">→</button>
+  <button id="pause" type="button" aria-pressed="false">Pause</button>
+</div>
+<div id="status" class="status" aria-live="polite"></div>
+__SCRIPTS__
+</body>
+</html>

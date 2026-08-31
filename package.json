@@ -1,0 +1,21 @@
+{
+  "name": "wallpaper",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Self-playing pixel-art visualizers for the desktop.",
+  "main": "desktop/main.js",
+  "scripts": {
+    "build": "node build.js",
+    "start": "npm run build && npm run build:native && electron .",
+    "build:native": "node scripts/build-native.js",
+    "test": "node scripts/smoke.js",
+    "check": "node --check build.js && node --check src/runtime.js && node --check desktop/main.js && node --check desktop/preload.js"
+  },
+  "devDependencies": {
+    "electron": "43.1.1",
+    "electron-builder": "^26.0.12",
+    "node-addon-api": "^8.5.0",
+    "node-gyp": "^11.4.2",
+    "playwright": "^1.61.1"
+  }
+}
